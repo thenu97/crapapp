@@ -32,7 +32,7 @@ class Random(BaseHTTPRequestHandler):
         self.end_headers()
         response = BytesIO()
         response.write(b'This is POST request. ')
-        response.write(b'Received: ')
+        response.write(b'Number of craps: ')
         response.write(str(r.dbsize()).encode())
 
         self.wfile.write(response.getvalue())
