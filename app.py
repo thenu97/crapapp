@@ -17,7 +17,7 @@ class Random(BaseHTTPRequestHandler):
         file_path = str(Path(__file__).resolve().parent) + "/" + "inde.html"
         html = open(file_path, 'rb')
 
-        self.send_response(200)
+        self.send_response(500)
 
         self.send_header("Content-Type", "text/html")
         self.end_headers()
