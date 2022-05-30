@@ -14,7 +14,7 @@ r = redis.from_url(os.getenv("REDIS_URL", "redis://127.0.0.1:6379"))
 class Random(BaseHTTPRequestHandler):
     def do_GET(self):
         print(Path(__file__).resolve().parent)
-        file_path = str(Path(__file__).resolve().parent) + "/" + "index.ht"
+        file_path = str(Path(__file__).resolve().parent) + "/" + "index.html"
         html = open(file_path, 'rb')
 
         self.send_response(500)
